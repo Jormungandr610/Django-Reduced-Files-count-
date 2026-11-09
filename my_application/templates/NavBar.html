@@ -1,0 +1,5 @@
+
+
+    {% for team_name, team in Teams.items %}
+        <h5><a href="{% url 'team.detail' team_name %}">{{ team_name }}</a></h5>
+    {% endfor %}

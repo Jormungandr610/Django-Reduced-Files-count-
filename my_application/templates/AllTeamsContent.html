@@ -1,0 +1,12 @@
+{% include "NavBar.html" %}
+
+{% block content %}
+    <h1>One of many teams of BaseCamp</h1>
+    {% for team_name, team in Teams.items %}
+        {% if team_name == id %}
+        <h2>{{ team_name }}</h2>
+        <p><strong>Members:</strong> {{ team.members|join:", " }}</p>
+        <p><strong>Description:</strong> {{ team.description }}</p>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
